@@ -5,7 +5,7 @@ import numpy as np
 
 '''
 This kick starts the model building by tuning various vectorizer and
-classifier parameters and proceeds to feature selection and printing
+classifier parameters and proceeds to feature selection and prints out
 classification report
 '''
 if __name__ == '__main__':
