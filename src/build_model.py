@@ -11,7 +11,7 @@ from collections import defaultdict
 from feature_selection import get_important_features
 
 '''
-This module fits the final model (selected from 'run_model_selection')
+Module to fit the final model (selected from 'run_model_selection')
 to the data, prints out important features per class, classification
 report and finally saves the model after tuning different parameters.
 Import this functionality in run_classification.
