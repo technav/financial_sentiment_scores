@@ -25,9 +25,9 @@ Precision Bootstrapping is a semi-supervised self-training framework aimed to im
 
 Examples of top bearish/bullish features:
 
-                                | Bullish       |         | Bearish    |         | 
+                                |           Bullish       |         Bearish      | 
                                 |---------------|---------|------------|---------| 
-                                | Buy           | Beat    | Drop       | plunge  | 
+                                | Buy           | Beat    | Drop       | Negative| 
                                 | Growth        | Upgrade | Down from  | Decline | 
                                 | Profit rise   | Recover | Plunge     | Slip    | 
                                 | Surge         | Be able | Fell       | Tumble  | 
