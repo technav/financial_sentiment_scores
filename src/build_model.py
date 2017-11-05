@@ -26,6 +26,9 @@ def override(x):
 def fit_model(X_train, y_train, X_test, y_test, output_path):
     ''' Run gridsearch to find best models for lasso, linear SVM,
     Random forest classifier and adaboost classifier
+    INPUT: 4 lists of train/test data
+            str of output path to pickle and save the model
+    OUTPUT: NONE
     '''
     tfidf = TfidfVectorizer(lowercase=False, decode_error = 'ignore',
                             preprocessor = override,

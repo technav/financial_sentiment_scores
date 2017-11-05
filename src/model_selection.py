@@ -15,11 +15,13 @@ import re
 
 '''
 Module meant for model selection by looking at various tokenization /
-vectorization and classifier parameters 
+vectorization and classifier parameters
 '''
 
 def pre_processor(text):
     ''' Clean text to remove non-alpha characters
+    INPUT: str
+    OUTPUT: str
     '''
     text = re.sub('<[^>]*>', '', text)
     #emoticons = re.findall('(?::|;|=)(?:-)?(?:\)|\(|D|P)', text)
@@ -28,6 +30,8 @@ def pre_processor(text):
 
 def tokenizer(text):
     ''' Regular tokenizer
+    INPUT: str
+    OUTPUT: list
     '''
     sw = stopwords.words('english')
     text = pre_processor(text)
@@ -35,6 +39,8 @@ def tokenizer(text):
 
 def tokenizer_snowball(text):
     ''' SnowballStemmer to transform word into its root form
+    INPUT: str
+    OUTPUT: list
     '''
     sw = stopwords.words('english')
     snowball = SnowballStemmer('english')
@@ -44,6 +50,8 @@ def tokenizer_snowball(text):
 
 def tokenizer_lancaster(text):
     ''' Lancaster stemmer to transform word into its root form
+    INPUT: str
+    OUTPUT: list
     '''
     sw = stopwords.words('english')
     lcstr = LancasterStemmer()
@@ -54,6 +62,8 @@ def tokenizer_lancaster(text):
 def lemmatize(text):
     '''
     Get tokens, POS tags and lemmatizes tokens using WordNetLemmatizer.
+    INPUT: str
+    OUTPUT: list
     '''
     tag = {'N': wn.NOUN,
             'V': wn.VERB,
@@ -77,6 +87,10 @@ def lemmatize(text):
 def get_best_model(X, y):
     ''' Run gridsearch to find best models for lasso, linear SVM,
     Random forest classifier and adaboost classifier
+    INPUT: list of train headlines
+            list of train labels
+    OUTPUT: list of models
+            model from GSCV
     '''
     sw = stopwords.words('english')
 

@@ -32,6 +32,8 @@ def override(x):
 def fit_model(X_train, y_train, X_test, y_test):
     ''' Run gridsearch to find best models for lasso, linear SVM,
     Random forest classifier and adaboost classifier
+    INPUT: list, list, list, list
+    OUTPUT: model
     '''
     tfidf = TfidfVectorizer(lowercase=False, decode_error = 'ignore',
                             preprocessor = override,
@@ -95,6 +97,8 @@ def train_data(train_df, itr, unlabeled_df, evaluation_df):
     using the same features and labels a new set of
     previously unlabeled data which will be added to the
     training data for the next loop
+    INPUT:  DF, int, DF, DF
+    OUTPUT: model, DF, int 
     '''
     df = shuffle(train_df)
     X = df['headline'].tolist()
