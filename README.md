@@ -33,4 +33,12 @@ Examples of top bearish/bullish features:
                                 | Surge         | Be able | Fell       | Tumble  | 
                                 | Sale increase | Support | Decrease   | Hit     | 
 
+## References
+
+### References:
+
+1. Malo, Pekka & Sinha, Ankur & Takala, Pyry & Korhonen, Pekka & Wallenius, Jyrki. (2013). FinancialPhraseBank-v1.0. 
+2. https://www.cs.sfu.ca/~anoop/papers/pdf/semisup_naacl.pdf
+3. http://cs.stanford.edu/people/danqi/papers/tac2015.pdf
+4. https://www3.nd.edu/~mcdonald/Word_Lists.html
 
