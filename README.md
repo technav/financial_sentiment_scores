@@ -1,4 +1,4 @@
-### Financial Headlines Sentiment Scores
+#### Financial Headlines Sentiment Scores
 
 ## Summary
 Given the explosion of unstructured data, the influence of text analytics is increasing across various domains. When it comes to its application in finance, Sentiment Analysis lies somewhere in between technical and fundamental analysis. The goal of this capstone project is to identify the sentiment polarity in a company specific financial headline as positive (1) or negative (-1) or neutral (0) and predict end-of-day sentiment scores for over 100,000 headlines.
@@ -25,4 +25,9 @@ Precision Bootstrapping is a semi-supervised self-training framework aimed to im
 
 Examples of top bearish/bullish features:
 
-                    
+### References:
+
+1. Malo, Pekka & Sinha, Ankur & Takala, Pyry & Korhonen, Pekka & Wallenius, Jyrki. (2013). FinancialPhraseBank-v1.0. 
+2. https://www.cs.sfu.ca/~anoop/papers/pdf/semisup_naacl.pdf
+3. http://cs.stanford.edu/people/danqi/papers/tac2015.pdf
+4. https://www3.nd.edu/~mcdonald/Word_Lists.html
