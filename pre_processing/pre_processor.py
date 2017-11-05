@@ -20,7 +20,7 @@ class TextPreprocessor(BaseEstimator, TransformerMixin):
 
     def __init__(self, stopwords=None, punct=None):
         """
-        Instantiates the Text processor
+        Instantiates the Text processor with custom stopwords
         """
         self.stopwords = set(sw.words('english') + \
                     ['pct', 'news', 'GMT', 'AM', 'PM', 'Reuters', \
@@ -34,12 +34,16 @@ class TextPreprocessor(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         """
         Fit and return self.
+        INPUT: X
+        OUTPUT: self
         """
         return self
 
     def transform(self, X):
         """
         Pre-processing of each headline.
+        INPUT: list of all headlines
+        OUTPUT: list of cleaned tokens
         """
         all_tokens = []
         for hl in X:
@@ -61,6 +65,8 @@ class TextPreprocessor(BaseEstimator, TransformerMixin):
         applying word/punctuation tokenization, and POS tagging.
         It uses the POS tags to look up the lemma in WordNet, and returns
         the lowercase version of all words.
+        INPUT: str
+        OUTPUT: str 
         """
         # Break the headline into pos tagged tokens
         #headline = TextBlob(headline.decode('ascii',errors='replace'))
