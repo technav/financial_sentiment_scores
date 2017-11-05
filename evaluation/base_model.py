@@ -16,6 +16,8 @@ sentiment score for each headline
 def load_lexicon(filepath):
     '''Loads positive, negative and neutral word lists and stopwords
     from Loughran-McDonald financial lexicon
+    INPUT: str; file path of lexicon
+    OUTPUT: list, list, list, list; list of pos/neg/net/stop words
     '''
     with open(filepath+'/PositiveWords.csv', 'r') as p:
         pos_wrdlns = p.readlines()
@@ -39,6 +41,8 @@ def load_lexicon(filepath):
 def clean_headline(headline, stp_wrds):
     '''Removes punctuation, stopwords and returns lowercase text in a
     list of single words
+    INPUT: str, list of stop words
+    OUTPUT: list of tokens
     '''
     headline = headline.decode('ascii',errors='ignore')
     tokenizer = RegexpTokenizer(r'\w+')
@@ -49,7 +53,10 @@ def clean_headline(headline, stp_wrds):
     return clean_wrds
 
 def assign_sentiment(hdln, pos, neg, neut, sw):
-    '''
+    ''' Takes headline, list of pos, neg, neutral and stop words
+    and returns sentiment score as 1/-1/0
+    INPUT: str, list, list, list, list
+    OUTPUT: -1/1/0
     '''
     hl_wrds = clean_headline(hdln, sw)
     l_pos = [w for w in hl_wrds if w in pos]

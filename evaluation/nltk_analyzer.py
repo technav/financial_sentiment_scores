@@ -15,7 +15,12 @@ This module uses off-the-shelf nltk sentiment analyzer to run
 sentiment analysis and get a baseline score
 '''
 def run_sentiment_analysis(X_train, X_test, y_train, y_test):
-
+    ''' Takes train/test lists, applies features and transform train
+    and fits classifier on transformed train. Evaluates on test
+    using this classifier
+    INPUT: 4 lists
+    OUTPUT: returns dictionary of scores 
+    '''
     stp_wrds = sw.words('english')
     #Initialize sentiment analyzer and build vocab
     analyzer = SentimentAnalyzer()
@@ -60,4 +65,3 @@ if __name__ == '__main__':
     acc_score = run_sentiment_analysis(X_train, X_test, y_train, y_test)
 
     print "Accuracy: ", acc_score['Accuracy']
-    
