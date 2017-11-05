@@ -19,13 +19,15 @@ Main steps in the pipeline are as follows:
 
 ## Precision Bootstrapping
 
-Precision Bootstrapping is a semi-supervised self-training framework aimed to improve the performance of a supervised ML model/classifier by learning from both labeled and unlabeled data. At a high level, the method works by iteratively labelling the unlabeled instances using a trained classifier and then retraining the classifier on the expanded training dataset.     
+Precision Bootstrapping is a semi-supervised self-training framework aimed to improve the performance of a supervised ML model/classifier by learning from both labeled and unlabeled data. At a high level, the method works by iteratively labelling the unlabeled instances using a trained classifier and then retraining the classifier on the expanded training dataset. Process overview is shown in the image, 'Precision_Bootstrapping.png'.
+
+In each iteration the trained model is evaluated on held-out labels. At the end of all iterations, the classifier/model that has good balance between precision and recall as per the current use-case would be selected as the final model. Final results improved the recall by 16% with a decrease in precision by 2%.       
 
 ## Top features
 
 Examples of top bearish/bullish features:
 
-  <img src="Top_ftrs.png" width="250" height="130">
+  <img src="Top_ftrs.png" width="300" height="150">
 
 ### References:
 
