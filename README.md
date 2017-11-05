@@ -25,7 +25,7 @@ Precision Bootstrapping is a semi-supervised self-training framework aimed to im
 
 Examples of top bearish/bullish features:
 
-  ![](Top_ftrs.png = 50x20)
+  <img src="Top_ftrs.png" width= "100")
 
 ### References:
 
