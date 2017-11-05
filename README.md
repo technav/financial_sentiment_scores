@@ -33,7 +33,6 @@ Examples of top bearish/bullish features:
                                 | Surge         | Be able | Fell       | Tumble  | 
                                 | Sale increase | Support | Decrease   | Hit     | 
 
-## References
 
 ### References:
 
